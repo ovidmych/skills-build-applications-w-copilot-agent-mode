@@ -23,7 +23,7 @@ const Teams = () => {
   const handleClose = () => setShowModal(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Здесь должна быть логика отправки новой команды
+    // Logic for submitting a new team goes here
     setShowModal(false);
     setTeamName("");
   };

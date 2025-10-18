@@ -1,0 +1,130 @@
+
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+
+.App-logo {
+  height: 60px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+
+.App-link, .navbar .nav-link, a {
+  color: #1e90ff;
+  transition: color 0.2s;
+}
+.App-link:hover, .navbar .nav-link:hover, a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  box-shadow: 0 2px 8px rgba(30,60,114,0.08);
+}
+.navbar-brand {
+  color: #ff9800 !important;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: #ff9800 !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, .display-4, .display-6 {
+  color: #1e3c72;
+  font-weight: 700;
+}
+
+/* Tables */
+.table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(30,60,114,0.06);
+}
+.table thead {
+  background: #1e3c72;
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f0f7ff;
+}
+.table-bordered th, .table-bordered td {
+  border-color: #1e3c72;
+}
+
+/* Buttons */
+.btn-primary, .btn-success, .btn-secondary {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(30,60,114,0.08);
+  transition: background 0.2s;
+}
+.btn-primary:hover, .btn-success:hover, .btn-secondary:hover {
+  background: linear-gradient(90deg, #ff9800 0%, #ffb347 100%);
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30,60,114,0.10);
+  border: none;
+}
+.card-title {
+  color: #2a5298;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 12px;
+}
+.modal-header {
+  background: #1e3c72;
+  color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.modal-footer {
+  background: #f5f7fa;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

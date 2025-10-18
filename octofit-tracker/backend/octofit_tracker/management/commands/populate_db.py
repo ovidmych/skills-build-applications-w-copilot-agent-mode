@@ -6,26 +6,26 @@ from pymongo import MongoClient
 
 # Sample data
 USERS = [
-    {"name": "Tony Stark", "email": "tony@marvel.com", "team": "marvel"},
-    {"name": "Steve Rogers", "email": "steve@marvel.com", "team": "marvel"},
-    {"name": "Bruce Wayne", "email": "bruce@dc.com", "team": "dc"},
-    {"name": "Clark Kent", "email": "clark@dc.com", "team": "dc"},
+    {"username": "Tony Stark", "email": "tony@marvel.com", "team": "marvel"},
+    {"username": "Steve Rogers", "email": "steve@marvel.com", "team": "marvel"},
+    {"username": "Bruce Wayne", "email": "bruce@dc.com", "team": "dc"},
+    {"username": "Clark Kent", "email": "clark@dc.com", "team": "dc"},
 ]
 TEAMS = [
     {"name": "marvel", "members": ["tony@marvel.com", "steve@marvel.com"]},
     {"name": "dc", "members": ["bruce@dc.com", "clark@dc.com"]},
 ]
 ACTIVITIES = [
-    {"user_email": "tony@marvel.com", "activity": "Running", "duration": 30},
-    {"user_email": "bruce@dc.com", "activity": "Cycling", "duration": 45},
+    {"user": "tony@marvel.com", "type": "Running", "calories": 300, "date": "2024-06-01"},
+    {"user": "bruce@dc.com", "type": "Cycling", "calories": 450, "date": "2024-06-02"},
 ]
 LEADERBOARD = [
-    {"team": "marvel", "points": 100},
-    {"team": "dc", "points": 90},
+    {"team": "marvel", "points": 100, "rank": 1},
+    {"team": "dc", "points": 90, "rank": 2},
 ]
 WORKOUTS = [
-    {"name": "Pushups", "difficulty": "easy"},
-    {"name": "Squats", "difficulty": "medium"},
+    {"description": "Pushups", "suggested_for": "easy"},
+    {"description": "Squats", "suggested_for": "medium"},
 ]
 
 class Command(BaseCommand):

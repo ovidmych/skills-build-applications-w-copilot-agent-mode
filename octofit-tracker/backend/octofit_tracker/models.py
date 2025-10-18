@@ -3,13 +3,13 @@ from djongo import models
 class User(models.Model):
     username = models.CharField(max_length=150, unique=True)
     email = models.EmailField(unique=True)
-    team = models.ForeignKey('Team', null=True, blank=True, on_delete=models.SET_NULL)
+    team = models.ForeignKey('Team', null=True, blank=True, on_delete=models.SET_NULL, related_name='user_set')
     def __str__(self):
         return self.username
 
 class Team(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    members = models.ArrayReferenceField(User, blank=True)
+    members = models.ArrayReferenceField(User, blank=True, related_name='teams_members')
     def __str__(self):
         return self.name
 

@@ -26,7 +26,7 @@ const Workouts = () => {
   const handleCloseForm = () => setShowForm(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Здесь должна быть логика отправки новой тренировки
+    // Logic for submitting a new workout goes here
     setShowForm(false);
     setWorkoutName("");
     setWorkoutDetails("");
